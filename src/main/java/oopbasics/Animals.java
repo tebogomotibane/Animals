@@ -1,5 +1,6 @@
 package oopbasics;
 
+import java.text.MessageFormat;
 public class Animals {
     private final String name;
 
@@ -11,11 +12,11 @@ public class Animals {
         return name;
     }
 
-    public String sound() {
+     public String sound() {
         return "sounds...";
     }
 
     public String eat() {
-        return "\"{name}\"  eats";
+        return MessageFormat.format("{0}  eats",name);
     }
 }
